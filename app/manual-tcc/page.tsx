@@ -23,6 +23,7 @@ export default function ManualTccPage() {
       <SiteHeader />
       <main>
         <Hero />
+        <Testimonials />
         <PainPoints />
         <Solution />
         <About />
@@ -31,7 +32,6 @@ export default function ManualTccPage() {
         <TableOfContents />
         <Audience />
         <Comparison />
-        <Testimonials />
         <Faq />
         <FinalCta />
       </main>

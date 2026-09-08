@@ -8,25 +8,25 @@ import testimonio3 from '@/public/images/testimonio-3.webp'
 const TESTIMONIALS = [
   {
     photo: testimonio1,
-    title: 'Un manual diseñado para el escritorio clínico, no para el anaquel',
+    title: 'Lo abro 5 minutos antes de cada sesión',
     quote:
-      'La mayoría de los libros de TCC son tomos de 600 páginas que no puedes revisar rápido entre pacientes. Este manual de 130 páginas va directo al grano. Me ha ayudado a estructurar mejor cada sesión de 50 minutos sin improvisar.',
+      'Va directo a la reestructuración cognitiva y al modelo de Beck sin tanta paja teórica. Por fin algo que puedo consultar rápido entre pacientes.',
     name: 'Psic. Fernanda Morales',
     role: 'Terapeuta Cognitivo-Conductual',
   },
   {
     photo: testimonio2,
-    title: 'De las mejores inversiones que he hecho para mi consultorio',
+    title: 'El Kit de Expedientes valió toda la compra',
     quote:
-      'Compré el manual por los 11 capítulos de TCC, pero lo que terminó por fascinarme fue el Kit de Expedientes Clínicos. Trae los formatos de exploración del estado mental, historial clínico y prevención de recaídas listos para usar. Por $27 USD el valor que aporta es enorme.',
+      'Los consentimientos informados, hojas de RPD y notas de sesión ya listos. Me ahorró semanas de trabajo administrativo.',
     name: 'Lic. Diego Saldaña',
     role: 'Psicología Clínica',
   },
   {
     photo: testimonio3,
-    title: 'La guía que me faltaba para dar el paso a atender pacientes',
+    title: 'Me quitó el miedo a atender sola',
     quote:
-      'Al salir de la universidad sientes mucho vacío entre lo teórico y lo que de verdad pasa en la consulta. Este manual te lleva de la mano en la conceptualización cognitiva y cómo aplicar las técnicas conductuales. Da muchísima seguridad.',
+      'Recién egresada y la conceptualización de casos me paralizaba. Los 4 casos comentados te guían paso a paso. Ahora me siento segura.',
     name: 'Psic. Andrea Torres',
     role: 'Psicóloga Sanitaria',
   },
@@ -41,7 +41,7 @@ const RESOLVED_QUESTIONS = [
 export function Testimonials() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             Lo que dicen quienes ya lo usan
@@ -51,20 +51,20 @@ export function Testimonials() {
           </h2>
         </FadeIn>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <FadeIn
               key={t.name}
               delay={i * 80}
             >
-              <div className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
+              <div className="flex h-full flex-col gap-2.5 rounded-xl border border-border bg-card p-4 shadow-sm">
+                <div className="flex items-center gap-2.5">
+                  <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
                     <Image
                       src={t.photo}
                       alt={t.name}
-                      width={48}
-                      height={48}
+                      width={40}
+                      height={40}
                       loading="lazy"
                       className="h-full w-full object-cover"
                     />
@@ -84,12 +84,12 @@ export function Testimonials() {
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <Star
                       key={starIndex}
-                      className="h-4 w-4 fill-amber-400 text-amber-400"
+                      className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
                     />
                   ))}
                 </div>
 
-                <h3 className="font-heading text-base font-bold leading-snug text-primary">
+                <h3 className="font-heading text-sm font-bold leading-snug text-primary">
                   {t.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
