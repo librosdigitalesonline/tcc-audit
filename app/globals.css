@@ -180,6 +180,23 @@
 }
 
 @layer utilities {
+  @keyframes breathing-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+  .animate-breathing-pulse {
+    animation: breathing-pulse 1.5s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-breathing-pulse {
+      animation: none;
+    }
+  }
   .fade-in-section {
     opacity: 0;
     transform: translateY(24px);
