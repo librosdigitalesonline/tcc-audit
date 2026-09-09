@@ -43,9 +43,8 @@ export default function RootLayout({
       className={`light ${inter.variable} ${jakarta.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://player.mux.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://image.mux.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://stream.mux.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://t.whop.tw" crossOrigin="anonymous" />
         <Script
           id="whop-pixel"
           strategy="afterInteractive"
@@ -55,12 +54,12 @@ export default function RootLayout({
         />
         <Script
           id="gtag-base"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-E85WDCJPBK"
         />
         <Script
           id="gtag-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
