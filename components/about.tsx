@@ -1,5 +1,4 @@
 import { FadeIn } from '@/components/fade-in'
-import { BookCarousel } from '@/components/book-carousel'
 
 const STATS = [
   { value: '130', label: 'Páginas clínicas' },
@@ -10,21 +9,15 @@ const STATS = [
 export function About() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:py-20 lg:grid-cols-2">
+      <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:py-20">
         <FadeIn>
-          <div className="mx-auto w-full max-w-md">
-            <BookCarousel />
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={100}>
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             Quién lo elabora
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Elaborado por psicólogos clínicos para la consulta real
           </h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted-foreground">
             Un equipo de psicólogos clínicos en ejercicio construyó cada
             capítulo pensando en lo que de verdad ocurre frente al paciente.
             Todo el contenido está respaldado por evidencia científica
@@ -32,7 +25,7 @@ export function About() {
             con base sólida.
           </p>
 
-          <div className="mt-8 grid grid-cols-3 gap-4">
+          <div className="mx-auto mt-8 grid max-w-md grid-cols-3 gap-4">
             {STATS.map((stat) => (
               <div
                 key={stat.label}

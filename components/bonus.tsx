@@ -2,6 +2,7 @@ import { Gift, BookOpen, FolderKanban, Check } from 'lucide-react'
 import { CtaButton } from '@/components/cta-button'
 import { FadeIn } from '@/components/fade-in'
 import { KitCarousel } from '@/components/kit-carousel'
+import { BookCarousel } from '@/components/book-carousel'
 
 const MANUAL_ITEMS = [
   '130 páginas de práctica clínica',
@@ -115,7 +116,7 @@ export function Bonus() {
                   Manual TCC
                 </h3>
               </div>
-              <ul className="mt-5 flex-1 space-y-2.5">
+              <ul className="mt-5 space-y-2.5">
                 {MANUAL_ITEMS.map((item) => (
                   <li
                     key={item}
@@ -126,6 +127,11 @@ export function Bonus() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-6 flex-1">
+                <BookCarousel />
+              </div>
+
               <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
                 <span className="text-sm font-medium text-muted-foreground line-through">
                   $67 USD
