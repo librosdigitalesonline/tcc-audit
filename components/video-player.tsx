@@ -42,14 +42,12 @@ export function VideoPlayer() {
         className="object-cover"
         priority
       />
-      <span className="absolute inset-0 flex items-center justify-center bg-primary/20 transition-colors group-hover:bg-primary/30">
+      <span className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-primary/20 transition-colors group-hover:bg-primary/30">
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg transition-transform group-hover:scale-105">
           <Play className="h-7 w-7 fill-current" />
         </span>
-      </span>
-      <span className="absolute inset-x-0 top-0 flex justify-center p-3 sm:p-4">
-        <span className="rounded-lg bg-black/60 px-3 py-1.5 text-[14px] font-medium text-white sm:text-[16px]">
-          En 36 seg sabrás si esto es para ti
+        <span className="animate-breathing-pulse rounded-lg bg-black/60 px-3 py-1.5 text-center text-[14px] font-medium text-white sm:text-[16px]">
+          ▶️ Dale play — en 36 seg sabrás si esto es para ti
         </span>
       </span>
     </button>
