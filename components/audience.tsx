@@ -25,7 +25,7 @@ export function Audience() {
       id="para-quien"
       className="scroll-mt-24 bg-background"
     >
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             ¿Para quién es?

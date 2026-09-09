@@ -41,7 +41,7 @@ const RESOLVED_QUESTIONS = [
 export function Testimonials() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             Lo que dicen quienes ya lo usan

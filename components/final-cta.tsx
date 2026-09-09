@@ -12,7 +12,7 @@ const INCLUDED = [
 export function FinalCta() {
   return (
     <section className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:py-24">
+      <div className="mx-auto max-w-3xl px-4 py-8 text-center sm:py-12">
         <FadeIn>
           <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-4 py-1.5 text-sm font-semibold text-primary-foreground">
             <Zap className="h-4 w-4 text-[color:var(--color-chart-4)]" />
