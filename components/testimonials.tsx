@@ -63,8 +63,9 @@ export function Testimonials() {
                     <Image
                       src={t.photo}
                       alt={t.name}
-                      width={40}
-                      height={40}
+                      width={48}
+                      height={48}
+                      quality={60}
                       loading="lazy"
                       className="h-full w-full object-cover"
                     />
