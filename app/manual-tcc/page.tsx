@@ -4,6 +4,7 @@ import { Hero } from '@/components/hero'
 import { Testimonials } from '@/components/testimonials'
 import { SiteFooter } from '@/components/site-footer'
 import { PixelViewContent } from '@/components/pixel-view-content'
+import { PixelScrollDepth } from '@/components/pixel-scroll-depth'
 import { SocialProofToast } from '@/components/social-proof-toast'
 
 const PainPoints = dynamic(() =>
@@ -36,6 +37,7 @@ export default function ManualTccPage() {
   return (
     <div className="min-h-screen bg-background">
       <PixelViewContent />
+      <PixelScrollDepth />
       <SocialProofToast />
       <SiteHeader />
       <main>
