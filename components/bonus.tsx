@@ -117,11 +117,14 @@ export function Bonus() {
             <p className="text-sm font-medium uppercase tracking-wide text-primary-foreground/70">
               Valor total
             </p>
-            <p className="flex items-baseline gap-3">
+            <p className="flex flex-wrap items-baseline justify-center gap-3">
               <span className="text-2xl font-semibold text-primary-foreground/60 line-through">
-                $104
+                $67
               </span>
               <span className="font-heading text-5xl font-extrabold">$27</span>
+              <span className="rounded-full bg-orange-500 px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                -60%
+              </span>
             </p>
             <CtaButton
               size="lg"

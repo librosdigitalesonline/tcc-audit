@@ -29,7 +29,10 @@ export function SiteHeader() {
       {/* Urgency banner */}
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-center text-xs font-medium sm:text-sm">
-          <span>Solo quedan 17 kits de regalo</span>
+          <span>
+            Descubre el Kit de Expedientes Clínicos que recibes gratis con tu
+            manual
+          </span>
           <ArrowDown className="h-3.5 w-3.5 animate-bounce text-[color:var(--color-chart-4)]" />
         </div>
       </div>
