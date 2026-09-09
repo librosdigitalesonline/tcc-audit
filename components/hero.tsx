@@ -1,8 +1,7 @@
 import { BookMarked } from 'lucide-react'
 import { CtaButton } from '@/components/cta-button'
 import { FadeIn } from '@/components/fade-in'
-
-const VIDEO_URL = 'https://player.mux.com/cMi7MDEAL4mAgQ8vacch1WrXCyCr01jLmOR9LSEla7IY'
+import { VideoPlayer } from '@/components/video-player'
 
 export function Hero() {
   return (
@@ -37,15 +36,7 @@ export function Hero() {
 
         <FadeIn delay={240}>
           <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-border bg-primary shadow-xl">
-            <iframe
-              src={VIDEO_URL}
-              title="Presentación del Manual de Terapia Cognitivo-Conductual"
-              style={{ width: '100%', border: 'none', aspectRatio: '16 / 9' }}
-              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-              allowFullScreen
-              loading="lazy"
-              className="block"
-            />
+            <VideoPlayer />
           </div>
         </FadeIn>
 
