@@ -5,7 +5,6 @@ import { PainPoints } from '@/components/pain-points'
 import { Solution } from '@/components/solution'
 import { About } from '@/components/about'
 import { Bonus } from '@/components/bonus'
-import { TableOfContents } from '@/components/table-of-contents'
 import { Audience } from '@/components/audience'
 import { Comparison } from '@/components/comparison'
 import { Testimonials } from '@/components/testimonials'
@@ -25,13 +24,12 @@ export default function ManualTccPage() {
         <Hero />
         <Testimonials />
         <PainPoints />
-        <Solution />
-        <About />
-        <PricingStrip />
-        <Bonus />
-        <TableOfContents />
         <Audience />
+        <Solution />
+        <Bonus />
+        <About />
         <Comparison />
+        <PricingStrip />
         <Faq />
         <FinalCta />
       </main>

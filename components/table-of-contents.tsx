@@ -64,7 +64,7 @@ export function TableOfContents() {
       id="contenido"
       className="scroll-mt-24 bg-muted"
     >
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-5xl px-4 pt-6 pb-16 sm:pt-8 sm:pb-20">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             Contenido

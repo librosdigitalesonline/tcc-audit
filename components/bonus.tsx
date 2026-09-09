@@ -1,6 +1,8 @@
 import { Gift, BookOpen, FolderKanban, Check } from 'lucide-react'
 import { CtaButton } from '@/components/cta-button'
 import { FadeIn } from '@/components/fade-in'
+import { KitCarousel } from '@/components/kit-carousel'
+import { BookCarousel } from '@/components/book-carousel'
 
 const MANUAL_ITEMS = [
   '130 páginas de práctica clínica',
@@ -11,16 +13,9 @@ const MANUAL_ITEMS = [
 ]
 
 const KIT_ITEMS = [
-  'Consentimientos informados',
-  'Plantillas de historia clínica',
-  'Formatos de notas de sesión',
-  'Exploración del estado mental',
-  'Registros de conceptualización de casos',
-  'Formatos de evaluación y seguimiento',
-  'Plantillas de tareas para casa',
-  'Plan de prevención de recaídas',
-  'Guías de cierre terapéutico',
-  'Tutoriales en video de uso',
+  'Consentimientos, Historia Clínica, Notas de sesión y Exploración del Estado Mental',
+  'Formatos de evaluación, seguimiento, tareas y prevención de recaídas',
+  '+5 horas de video tutorial para saber cómo usarlos',
 ]
 
 export function Bonus() {
@@ -29,7 +24,7 @@ export function Bonus() {
       id="bonus"
       className="scroll-mt-24 bg-background"
     >
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 pt-16 pb-8 sm:pt-20 sm:pb-10">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent">
             <Gift className="h-4 w-4" />
@@ -41,41 +36,8 @@ export function Bonus() {
         </FadeIn>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {/* Manual card */}
-          <FadeIn>
-            <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                  <BookOpen className="h-5 w-5" />
-                </span>
-                <h3 className="font-heading text-xl font-bold text-primary">
-                  Manual TCC
-                </h3>
-              </div>
-              <ul className="mt-5 flex-1 space-y-2.5">
-                {MANUAL_ITEMS.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2.5 text-sm text-foreground"
-                  >
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-                <span className="text-sm font-medium text-muted-foreground line-through">
-                  $67 USD
-                </span>
-                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
-                  Incluido
-                </span>
-              </div>
-            </div>
-          </FadeIn>
-
           {/* Kit card */}
-          <FadeIn delay={100}>
+          <FadeIn>
             <div className="relative flex h-full flex-col rounded-2xl border-2 border-accent bg-card p-7 shadow-md">
               <span className="absolute -top-3 left-7 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-foreground">
                 Bonus de regalo
@@ -88,7 +50,7 @@ export function Bonus() {
                   Kit de Expedientes Clínicos Psicológicos
                 </h3>
               </div>
-              <ul className="mt-5 grid flex-1 gap-2.5 sm:grid-cols-2">
+              <ul className="mt-5 space-y-2.5">
                 {KIT_ITEMS.map((item) => (
                   <li
                     key={item}
@@ -99,9 +61,52 @@ export function Bonus() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+
+              <div className="mt-6 flex-1">
+                <KitCarousel />
+              </div>
+
+              <div className="mt-6 flex items-end justify-between border-t border-border pt-4">
                 <span className="text-sm font-medium text-muted-foreground line-through">
                   $37 USD
+                </span>
+                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
+                  Incluido
+                </span>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Manual card */}
+          <FadeIn delay={100}>
+            <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                  <BookOpen className="h-5 w-5" />
+                </span>
+                <h3 className="font-heading text-xl font-bold text-primary">
+                  Manual TCC
+                </h3>
+              </div>
+              <ul className="mt-5 space-y-2.5">
+                {MANUAL_ITEMS.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-sm text-foreground"
+                  >
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 flex-1">
+                <BookCarousel />
+              </div>
+
+              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+                <span className="text-sm font-medium text-muted-foreground line-through">
+                  $67 USD
                 </span>
                 <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
                   Incluido
