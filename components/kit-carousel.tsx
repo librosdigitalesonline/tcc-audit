@@ -52,13 +52,13 @@ export function KitCarousel() {
           {SLIDES.map((slide) => (
             <div
               key={slide.label}
-              className="relative aspect-[3/4] w-full shrink-0 basis-full bg-muted"
+              className="relative aspect-[3/2] w-full shrink-0 basis-full bg-muted"
             >
               <Image
                 src={slide.src}
                 alt={slide.alt}
-                width={588}
-                height={882}
+                width={675}
+                height={450}
                 quality={60}
                 placeholder="blur"
                 loading="lazy"
