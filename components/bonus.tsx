@@ -1,6 +1,7 @@
 import { Gift, BookOpen, FolderKanban, Check } from 'lucide-react'
 import { CtaButton } from '@/components/cta-button'
 import { FadeIn } from '@/components/fade-in'
+import { KitCarousel } from '@/components/kit-carousel'
 
 const MANUAL_ITEMS = [
   '130 páginas de práctica clínica',
@@ -23,6 +24,16 @@ const KIT_ITEMS = [
   'Tutoriales en video de uso',
 ]
 
+const KIT_BADGES = [
+  '+120 páginas de formatos clínicos',
+  'Consentimiento Informado',
+  'Historia Clínica',
+  'Nota Clínica',
+  'Exploración del Estado Mental',
+  'Para Niños, Adolescentes y Adultos',
+  '+5 horas de video tutorial incluidas',
+]
+
 export function Bonus() {
   return (
     <section
@@ -41,8 +52,60 @@ export function Bonus() {
         </FadeIn>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {/* Manual card */}
+          {/* Kit card */}
           <FadeIn>
+            <div className="relative flex h-full flex-col rounded-2xl border-2 border-accent bg-card p-7 shadow-md">
+              <span className="absolute -top-3 left-7 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-foreground">
+                Bonus de regalo
+              </span>
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent text-accent-foreground">
+                  <FolderKanban className="h-5 w-5" />
+                </span>
+                <h3 className="font-heading text-xl font-bold text-primary">
+                  Kit de Expedientes Clínicos Psicológicos
+                </h3>
+              </div>
+              <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+                {KIT_ITEMS.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-sm text-foreground"
+                  >
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6">
+                <KitCarousel />
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {KIT_BADGES.map((badge) => (
+                  <span
+                    key={badge}
+                    className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-1 items-end justify-between border-t border-border pt-4">
+                <span className="text-sm font-medium text-muted-foreground line-through">
+                  $37 USD
+                </span>
+                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
+                  Incluido
+                </span>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Manual card */}
+          <FadeIn delay={100}>
             <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm">
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
@@ -66,42 +129,6 @@ export function Bonus() {
               <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
                 <span className="text-sm font-medium text-muted-foreground line-through">
                   $67 USD
-                </span>
-                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
-                  Incluido
-                </span>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Kit card */}
-          <FadeIn delay={100}>
-            <div className="relative flex h-full flex-col rounded-2xl border-2 border-accent bg-card p-7 shadow-md">
-              <span className="absolute -top-3 left-7 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-foreground">
-                Bonus de regalo
-              </span>
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-                  <FolderKanban className="h-5 w-5" />
-                </span>
-                <h3 className="font-heading text-xl font-bold text-primary">
-                  Kit de Expedientes Clínicos Psicológicos
-                </h3>
-              </div>
-              <ul className="mt-5 grid flex-1 gap-2.5 sm:grid-cols-2">
-                {KIT_ITEMS.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2.5 text-sm text-foreground"
-                  >
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-                <span className="text-sm font-medium text-muted-foreground line-through">
-                  $37 USD
                 </span>
                 <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
                   Incluido
