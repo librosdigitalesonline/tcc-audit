@@ -47,6 +47,11 @@ export function VideoPlayer() {
           <Play className="h-7 w-7 fill-current" />
         </span>
       </span>
+      <span className="absolute inset-x-0 top-0 flex justify-center p-3 sm:p-4">
+        <span className="rounded-lg bg-black/60 px-3 py-1.5 text-[14px] font-medium text-white sm:text-[16px]">
+          En 36 seg sabrás si esto es para ti
+        </span>
+      </span>
     </button>
   )
 }
