@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Play } from 'lucide-react'
+import { track } from '@/lib/fbpixel'
 
 const VIDEO_URL =
   'https://player.mux.com/cMi7MDEAL4mAgQ8vacch1WrXCyCr01jLmOR9LSEla7IY'
@@ -11,6 +12,7 @@ const THUMBNAIL_URL =
 
 export function VideoPlayer() {
   const [playing, setPlaying] = useState(false)
+  const videoTracked = useRef(false)
 
   if (playing) {
     return (
@@ -28,7 +30,13 @@ export function VideoPlayer() {
   return (
     <button
       type="button"
-      onClick={() => setPlaying(true)}
+      onClick={() => {
+        setPlaying(true)
+        if (!videoTracked.current) {
+          track('ViewContent', { content_name: 'Video Play - Hero' })
+          videoTracked.current = true
+        }
+      }}
       aria-label="Reproducir video de presentación"
       className="group relative block w-full"
       style={{ aspectRatio: '16 / 9' }}

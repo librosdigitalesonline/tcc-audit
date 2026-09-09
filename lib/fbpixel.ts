@@ -33,3 +33,7 @@ export function trackViewContent() {
 export function trackAddToCart() {
   track('AddToCart', PRODUCT_PARAMS)
 }
+
+export function trackInitiateCheckout() {
+  track('InitiateCheckout', PRODUCT_PARAMS)
+}
