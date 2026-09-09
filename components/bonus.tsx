@@ -5,11 +5,8 @@ import { KitCarousel } from '@/components/kit-carousel'
 import { BookCarousel } from '@/components/book-carousel'
 
 const MANUAL_ITEMS = [
-  '130 páginas de práctica clínica',
-  '11 capítulos estructurados',
-  '4 casos clínicos comentados',
-  'Referencias científicas 2023–2025',
-  'Formato PDF de acceso inmediato',
+  '130 páginas · 11 capítulos · Casos clínicos comentados',
+  'Referencias científicas 2023-2025 · PDF de acceso inmediato',
 ]
 
 const KIT_ITEMS = [
