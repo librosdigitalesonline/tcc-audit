@@ -25,13 +25,13 @@ export default function ManualTccPage() {
         <Hero />
         <Testimonials />
         <PainPoints />
+        <Audience />
         <Solution />
-        <About />
-        <PricingStrip />
         <Bonus />
         <TableOfContents />
-        <Audience />
+        <About />
         <Comparison />
+        <PricingStrip />
         <Faq />
         <FinalCta />
       </main>

@@ -40,7 +40,7 @@ export function Bonus() {
       id="bonus"
       className="scroll-mt-24 bg-background"
     >
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 pt-16 pb-8 sm:pt-20 sm:pb-10">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent">
             <Gift className="h-4 w-4" />
