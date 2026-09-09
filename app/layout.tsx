@@ -43,9 +43,9 @@ export default function RootLayout({
       className={`light ${inter.variable} ${jakarta.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://player.mux.com" />
-        <link rel="preconnect" href="https://image.mux.com" />
-        <link rel="preconnect" href="https://stream.mux.com" />
+        <link rel="preconnect" href="https://player.mux.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://image.mux.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://stream.mux.com" crossOrigin="anonymous" />
       </head>
       <body className="font-sans antialiased bg-background text-foreground">
         <Script

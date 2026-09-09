@@ -25,7 +25,7 @@ export function Bonus() {
         <FadeIn className="mx-auto max-w-2xl text-center">
           <span
             id="bonus-title"
-            className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent"
+            className="inline-flex scroll-mt-16 items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent"
           >
             <Gift className="h-4 w-4" />
             Bonus exclusivo incluido
