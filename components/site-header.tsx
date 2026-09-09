@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, ArrowDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { CtaButton } from '@/components/cta-button'
 
@@ -27,15 +27,22 @@ export function SiteHeader() {
   return (
     <>
       {/* Urgency banner */}
-      <div className="bg-primary text-primary-foreground">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-center text-xs font-medium sm:text-sm">
-          <span>
-            Descubre el Kit de Expedientes Clínicos que recibes gratis con tu
-            manual
+      <button
+        type="button"
+        onClick={() =>
+          document
+            .getElementById('bonus')
+            ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+        className="block w-full bg-primary text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2.5 text-center font-medium leading-snug text-[16px] md:text-[18px]">
+          <span>🎁 Kit de Expedientes Clínicos GRATIS →</span>
+          <span className="animate-pulse font-bold underline decoration-2 underline-offset-2">
+            Ver qué incluye
           </span>
-          <ArrowDown className="h-3.5 w-3.5 animate-bounce text-[color:var(--color-chart-4)]" />
         </div>
-      </div>
+      </button>
 
       {/* Sticky navbar */}
       <header
