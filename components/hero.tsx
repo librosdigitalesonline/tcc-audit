@@ -14,7 +14,7 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-secondary to-transparent"
       />
-      <div className="relative mx-auto max-w-4xl px-4 pb-16 pt-14 text-center sm:pt-20">
+      <div className="relative mx-auto max-w-4xl px-4 pb-8 pt-8 text-center sm:pt-12">
         <FadeIn>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-primary shadow-sm">
             <BookMarked className="h-4 w-4 text-accent" />

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -16,6 +16,7 @@ const NAV_LINKS = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const headerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -24,16 +25,25 @@ export function SiteHeader() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const scrollToBonus = () => {
+    const target = document.getElementById('bonus-title')
+    if (!target) return
+    const headerHeight = headerRef.current?.getBoundingClientRect().height ?? 0
+    const extraGap = 16
+    const y =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight -
+      extraGap
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
+
   return (
     <>
       {/* Urgency banner */}
       <button
         type="button"
-        onClick={() =>
-          document
-            .getElementById('bonus')
-            ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
+        onClick={scrollToBonus}
         className="block w-full bg-primary text-primary-foreground transition-colors hover:bg-primary/90"
       >
         <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2.5 text-center font-medium leading-snug text-[16px] md:text-[18px]">
@@ -46,6 +56,7 @@ export function SiteHeader() {
 
       {/* Sticky navbar */}
       <header
+        ref={headerRef}
         className={cn(
           'sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md transition-shadow duration-200',
           scrolled && 'shadow-md shadow-primary/5',

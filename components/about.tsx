@@ -9,7 +9,7 @@ const STATS = [
 export function About() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:py-20">
+      <div className="mx-auto max-w-3xl px-4 py-8 text-center sm:py-12">
         <FadeIn>
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             Quién lo elabora
