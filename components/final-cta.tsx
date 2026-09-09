@@ -38,13 +38,16 @@ export function FinalCta() {
         </FadeIn>
 
         <FadeIn delay={160}>
-          <div className="mt-8 flex items-baseline justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-baseline justify-center gap-3">
             <span className="text-2xl font-semibold text-primary-foreground/50 line-through">
-              $104
+              $67
             </span>
             <span className="font-heading text-6xl font-extrabold">$27</span>
             <span className="text-lg font-semibold text-primary-foreground/70">
               USD
+            </span>
+            <span className="rounded-full bg-orange-500 px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-white">
+              -60%
             </span>
           </div>
 

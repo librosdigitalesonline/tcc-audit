@@ -2,7 +2,7 @@ import { BookMarked } from 'lucide-react'
 import { CtaButton } from '@/components/cta-button'
 import { FadeIn } from '@/components/fade-in'
 
-const VIDEO_URL = 'https://player.mux.com/BqFDfhmgRQgMONHl2rtUV01VUeBngR7H702GZSmC8hgE00'
+const VIDEO_URL = 'https://player.mux.com/cMi7MDEAL4mAgQ8vacch1WrXCyCr01jLmOR9LSEla7IY'
 
 export function Hero() {
   return (

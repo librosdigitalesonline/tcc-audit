@@ -8,6 +8,7 @@ import { Bonus } from '@/components/bonus'
 import { TableOfContents } from '@/components/table-of-contents'
 import { Audience } from '@/components/audience'
 import { Comparison } from '@/components/comparison'
+import { Testimonials } from '@/components/testimonials'
 import { Faq } from '@/components/faq'
 import { FinalCta } from '@/components/final-cta'
 import { SiteFooter } from '@/components/site-footer'
@@ -22,6 +23,7 @@ export default function ManualTccPage() {
       <SiteHeader />
       <main>
         <Hero />
+        <Testimonials />
         <PainPoints />
         <Solution />
         <About />
