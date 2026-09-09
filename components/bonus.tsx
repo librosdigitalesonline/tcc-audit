@@ -13,26 +13,9 @@ const MANUAL_ITEMS = [
 ]
 
 const KIT_ITEMS = [
-  'Consentimientos informados',
-  'Plantillas de historia clínica',
-  'Formatos de notas de sesión',
-  'Exploración del estado mental',
-  'Registros de conceptualización de casos',
-  'Formatos de evaluación y seguimiento',
-  'Plantillas de tareas para casa',
-  'Plan de prevención de recaídas',
-  'Guías de cierre terapéutico',
-  'Tutoriales en video de uso',
-]
-
-const KIT_BADGES = [
-  '+120 páginas de formatos clínicos',
-  'Consentimiento Informado',
-  'Historia Clínica',
-  'Nota Clínica',
-  'Exploración del Estado Mental',
-  'Para Niños, Adolescentes y Adultos',
-  '+5 horas de video tutorial incluidas',
+  'Consentimientos, Historia Clínica, Notas de sesión y Exploración del Estado Mental',
+  'Formatos de evaluación, seguimiento, tareas y prevención de recaídas',
+  '+5 horas de video tutorial para saber cómo usarlos',
 ]
 
 export function Bonus() {
@@ -67,7 +50,7 @@ export function Bonus() {
                   Kit de Expedientes Clínicos Psicológicos
                 </h3>
               </div>
-              <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+              <ul className="mt-5 space-y-2.5">
                 {KIT_ITEMS.map((item) => (
                   <li
                     key={item}
@@ -79,22 +62,11 @@ export function Bonus() {
                 ))}
               </ul>
 
-              <div className="mt-6">
+              <div className="mt-6 flex-1">
                 <KitCarousel />
               </div>
 
-              <div className="mt-5 flex flex-wrap gap-2">
-                {KIT_BADGES.map((badge) => (
-                  <span
-                    key={badge}
-                    className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-                  >
-                    {badge}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-6 flex flex-1 items-end justify-between border-t border-border pt-4">
+              <div className="mt-6 flex items-end justify-between border-t border-border pt-4">
                 <span className="text-sm font-medium text-muted-foreground line-through">
                   $37 USD
                 </span>
