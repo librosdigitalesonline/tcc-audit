@@ -11,6 +11,14 @@ const FAQS = [
     a: 'El manual se entrega en formato PDF de alta calidad, optimizado para leer en computadora, tablet o celular. Recibes el acceso de forma inmediata tras tu compra y es tuyo de por vida.',
   },
   {
+    q: '¿Cómo recibo el acceso después de pagar?',
+    a: 'De inmediato. Al completar el pago recibes un correo con el acceso al manual en PDF y a todas las plantillas del Kit. No hay espera ni envío físico — todo está disponible en el momento.',
+  },
+  {
+    q: '¿Cómo funciona la garantía de 30 días?',
+    a: 'Si en 30 días consideras que el manual no te sirve, escribes pidiendo el reembolso y se te devuelve el total de tu compra. Sin formularios ni preguntas. El riesgo es nuestro, no tuyo.',
+  },
+  {
     q: '¿Qué incluye exactamente el Kit de Expedientes?',
     a: 'Incluye más de 10 herramientas clínicas: consentimientos informados, plantillas de historia clínica, formatos de notas de sesión, exploración del estado mental, registros de conceptualización, planes de prevención de recaídas y tutoriales en video para usarlos.',
   },
