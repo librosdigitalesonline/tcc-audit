@@ -38,12 +38,6 @@ const TESTIMONIALS = [
   },
 ]
 
-const RESOLVED_QUESTIONS = [
-  'Tenía miedo de que fuera solo otro PDF con conceptos repetidos de la universidad, pero es 100% aplicable.',
-  'El pago se procesó de inmediato y recibí los accesos al PDF y a todas las plantillas del kit sin ningún problema.',
-  'Incluye adaptaciones por ciclo vital y una excelente síntesis de modelos contemporáneos de tercera ola.',
-]
-
 export function Testimonials() {
   return (
     <section className="bg-muted">
@@ -104,28 +98,6 @@ export function Testimonials() {
             </FadeIn>
           ))}
         </div>
-
-        <FadeIn delay={240}>
-          <div className="mt-14">
-            <h3 className="text-balance text-center font-heading text-xl font-bold text-primary sm:text-2xl">
-              Preguntas resueltas por quienes ya lo tienen
-            </h3>
-
-            <div className="mx-auto mt-7 grid max-w-3xl gap-3">
-              {RESOLVED_QUESTIONS.map((text) => (
-                <div
-                  key={text}
-                  className="flex items-start gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-success" />
-                  <p className="text-sm leading-relaxed text-foreground">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
       </div>
     </section>
   )
