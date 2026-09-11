@@ -53,9 +53,9 @@ export function FinalCta() {
 
           <CtaButton
             size="lg"
-            className="mt-8 w-full sm:w-auto"
+            className="mt-8 w-full text-balance sm:w-auto"
           >
-            Quiero el Manual + Kit — $27
+            Quiero el Manual + Kit — $27 USD
           </CtaButton>
 
           <p className="mt-5 flex flex-wrap items-center justify-center gap-2 text-xs text-primary-foreground/70">

@@ -34,9 +34,17 @@ export function PricingStrip() {
             Después, el Manual queda en $67.
           </p>
 
-          <CtaButton className="w-full sm:w-auto">
-            Quiero el Manual + Kit — $27
-          </CtaButton>
+          <div className="flex w-full flex-col items-center sm:w-auto">
+            <CtaButton className="w-full text-balance sm:w-auto">
+              Quiero el Manual + Kit — $27 USD
+            </CtaButton>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Se cobra en USD. Verás el monto en tu moneda al pagar.
+            </p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Tarjeta, Apple Pay, Google Pay y métodos locales según tu país.
+            </p>
+          </div>
         </div>
       </div>
     </section>
