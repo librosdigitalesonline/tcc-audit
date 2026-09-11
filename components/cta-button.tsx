@@ -19,8 +19,6 @@ export function CtaButton({
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
       onClick={() => { trackAddToCart(); trackInitiateCheckout(); }}
       className={cn(
         'group inline-flex items-center justify-center gap-2 rounded-xl bg-accent font-semibold text-accent-foreground shadow-lg shadow-accent/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:translate-y-0',
