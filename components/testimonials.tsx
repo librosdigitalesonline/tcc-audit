@@ -53,7 +53,7 @@ export function Testimonials() {
             Lo que dicen quienes ya lo usan
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Psicólogos de tres países ya lo aplican en consulta
+            Psicólogos que ya dejaron de improvisar
           </h2>
         </FadeIn>
 
