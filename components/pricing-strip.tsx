@@ -29,7 +29,7 @@ export function PricingStrip() {
           </p>
 
           <CtaButton className="w-full sm:w-auto">
-            Quiero mi Manual + Kit — $27
+            Quiero el Manual + Kit — $27
           </CtaButton>
         </div>
       </div>

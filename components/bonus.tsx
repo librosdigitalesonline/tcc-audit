@@ -135,7 +135,7 @@ export function Bonus() {
               size="lg"
               className="w-full sm:w-auto"
             >
-              Obtener todo por $27
+              Quiero el Manual + Kit — $27
             </CtaButton>
           </div>
         </FadeIn>
