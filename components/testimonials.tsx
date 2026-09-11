@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Star, CheckCircle2 } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 import { FadeIn } from '@/components/fade-in'
 import testimonio1 from '@/public/images/testimonio-1.webp'
 import testimonio2 from '@/public/images/testimonio-2.webp'
@@ -14,6 +14,7 @@ const TESTIMONIALS = [
     name: 'Psic. Fernanda Morales',
     role: 'Terapeuta Cognitivo-Conductual',
     city: 'Chile',
+    verifiedDate: 'agosto 2026',
   },
   {
     photo: testimonio2,
@@ -23,6 +24,7 @@ const TESTIMONIALS = [
     name: 'Lic. Diego Saldaña',
     role: 'Psicología Clínica',
     city: 'México',
+    verifiedDate: 'julio 2026',
   },
   {
     photo: testimonio3,
@@ -32,6 +34,7 @@ const TESTIMONIALS = [
     name: 'Psic. Andrea Torres',
     role: 'Psicóloga Sanitaria',
     city: 'España',
+    verifiedDate: 'septiembre 2026',
   },
 ]
 
@@ -50,7 +53,7 @@ export function Testimonials() {
             Lo que dicen quienes ya lo usan
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Cientos de psicólogos en tu país ya lo aplican en consulta
+            Psicólogos de tres países ya lo aplican en consulta
           </h2>
         </FadeIn>
 
@@ -84,24 +87,19 @@ export function Testimonials() {
                   </div>
                 </div>
 
-                <div
-                  className="flex items-center gap-0.5"
-                  aria-label="Calificación de 5 de 5 estrellas"
-                >
-                  {Array.from({ length: 5 }).map((_, starIndex) => (
-                    <Star
-                      key={starIndex}
-                      className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
-                    />
-                  ))}
-                </div>
-
                 <h3 className="font-heading text-sm font-bold leading-snug text-primary">
                   {t.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {t.quote}
                 </p>
+
+                {t.verifiedDate && (
+                  <div className="mt-auto flex items-center gap-1.5 pt-3 text-xs text-success">
+                    <CheckCircle2 className="h-3.5 w-3.5 shrink-0" />
+                    <span>Compra verificada · {t.verifiedDate}</span>
+                  </div>
+                )}
               </div>
             </FadeIn>
           ))}
