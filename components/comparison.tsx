@@ -1,5 +1,6 @@
 import { X, Check } from 'lucide-react'
 import { FadeIn } from '@/components/fade-in'
+import { CtaButton } from '@/components/cta-button'
 
 const WITHOUT = [
   'Horas perdidas buscando técnicas en varios libros',
@@ -75,6 +76,15 @@ export function Comparison() {
             </div>
           </FadeIn>
         </div>
+
+        <FadeIn delay={200}>
+          <div className="mt-10 text-center">
+            <p className="text-base text-muted-foreground mb-5">
+              El segundo camino cuesta $27 y empieza hoy.
+            </p>
+            <CtaButton size="lg">Quiero el Manual + Kit — $27</CtaButton>
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

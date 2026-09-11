@@ -1,12 +1,14 @@
 import dynamic from 'next/dynamic'
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
-import { Testimonials } from '@/components/testimonials'
 import { SiteFooter } from '@/components/site-footer'
 import { PixelViewContent } from '@/components/pixel-view-content'
 import { PixelScrollDepth } from '@/components/pixel-scroll-depth'
 import { SocialProofToast } from '@/components/social-proof-toast'
 
+const Testimonials = dynamic(() =>
+  import('@/components/testimonials').then((mod) => mod.Testimonials),
+)
 const PainPoints = dynamic(() =>
   import('@/components/pain-points').then((mod) => mod.PainPoints),
 )
@@ -42,13 +44,13 @@ export default function ManualTccPage() {
       <SiteHeader />
       <main>
         <Hero />
-        <Testimonials />
         <PainPoints />
         <Audience />
         <Solution />
         <Bonus />
-        <About />
+        <Testimonials />
         <Comparison />
+        <About />
         <PricingStrip />
         <Faq />
         <FinalCta />

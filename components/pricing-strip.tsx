@@ -1,7 +1,13 @@
 import { Zap } from 'lucide-react'
 import { CtaButton } from '@/components/cta-button'
 
+const OFERTA_HASTA = new Date('2026-09-30T23:59:00-06:00')
+
 export function PricingStrip() {
+  const fechaLimite = OFERTA_HASTA.toLocaleDateString('es-MX', {
+    day: 'numeric',
+    month: 'long',
+  })
   return (
     <section
       id="oferta"
@@ -24,12 +30,12 @@ export function PricingStrip() {
           </div>
 
           <p className="w-full max-w-xs text-center text-sm font-medium text-muted-foreground sm:text-left">
-            Precio de lanzamiento por tiempo limitado — El Kit de Expedientes
-            gratis se incluye solo en esta etapa
+            El Kit de Expedientes gratis se incluye hasta el {fechaLimite}.
+            Después, el Manual queda en $67.
           </p>
 
           <CtaButton className="w-full sm:w-auto">
-            Quiero mi Manual + Kit — $27
+            Quiero el Manual + Kit — $27
           </CtaButton>
         </div>
       </div>

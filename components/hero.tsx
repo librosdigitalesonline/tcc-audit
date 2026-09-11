@@ -42,7 +42,7 @@ export function Hero() {
 
         <FadeIn delay={320}>
           <div className="mt-9">
-            <CtaButton size="lg">Quiero el Manual</CtaButton>
+            <CtaButton size="lg">Quiero el Manual + Kit — $27</CtaButton>
           </div>
         </FadeIn>
       </div>
