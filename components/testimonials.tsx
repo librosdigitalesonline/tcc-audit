@@ -13,6 +13,7 @@ const TESTIMONIALS = [
       'Va directo a la reestructuración cognitiva y al modelo de Beck sin tanta paja teórica. Por fin algo que puedo consultar rápido entre pacientes.',
     name: 'Psic. Fernanda Morales',
     role: 'Terapeuta Cognitivo-Conductual',
+    city: 'Chile',
   },
   {
     photo: testimonio2,
@@ -21,6 +22,7 @@ const TESTIMONIALS = [
       'Los consentimientos informados, hojas de RPD y notas de sesión ya listos. Me ahorró semanas de trabajo administrativo.',
     name: 'Lic. Diego Saldaña',
     role: 'Psicología Clínica',
+    city: 'México',
   },
   {
     photo: testimonio3,
@@ -29,6 +31,7 @@ const TESTIMONIALS = [
       'Recién egresada y la conceptualización de casos me paralizaba. Los 4 casos comentados te guían paso a paso. Ahora me siento segura.',
     name: 'Psic. Andrea Torres',
     role: 'Psicóloga Sanitaria',
+    city: 'España',
   },
 ]
 
@@ -47,7 +50,7 @@ export function Testimonials() {
             Lo que dicen quienes ya lo usan
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Psicólogos que ya lo aplican en consulta
+            Cientos de psicólogos en tu país ya lo aplican en consulta
           </h2>
         </FadeIn>
 
@@ -75,7 +78,9 @@ export function Testimonials() {
                     <p className="font-heading text-sm font-bold text-primary">
                       {t.name}
                     </p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {t.role}{t.city ? ` · ${t.city}` : ''}
+                    </p>
                   </div>
                 </div>
 
