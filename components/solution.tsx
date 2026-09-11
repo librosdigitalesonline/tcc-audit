@@ -4,23 +4,23 @@ import { FadeIn } from '@/components/fade-in'
 const FEATURES = [
   {
     icon: Brain,
-    title: 'Fundamentos sólidos',
-    text: 'Modelo cognitivo de Beck para aplicar directamente en consulta.',
+    title: 'Formula un caso completo en 15 minutos',
+    text: 'El modelo cognitivo de Beck aplicado paso a paso, con el formato de conceptualización ya armado.',
   },
   {
     icon: Wrench,
-    title: 'Técnicas paso a paso',
-    text: 'Procedimientos clínicos detallados listos para cada sesión.',
+    title: 'Llega a la sesión sabiendo qué vas a hacer',
+    text: 'Procedimientos que abres cinco minutos antes y aplicas igual, sin releer teoría.',
   },
   {
     icon: FolderTree,
-    title: 'Por diagnóstico',
-    text: 'Depresión, ansiedad, TOC, TEPT y trastornos alimentarios.',
+    title: 'Protocolo listo para los 5 diagnósticos más frecuentes',
+    text: 'Depresión, ansiedad, TOC, TEPT y trastornos alimentarios — cada uno con su ruta de intervención.',
   },
   {
     icon: Users,
-    title: 'Por ciclo vital',
-    text: 'Infancia, adolescencia, adulto y adulto mayor.',
+    title: 'Adapta la técnica a la edad sin improvisar',
+    text: 'Qué cambia en infancia, adolescencia, adulto y adulto mayor, explicado para cada técnica.',
   },
 ]
 
@@ -56,7 +56,7 @@ export function Solution() {
                   <f.icon className="h-6 w-6" />
                 </span>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-primary">
+                  <h3 className="font-heading text-base font-bold text-primary sm:text-lg">
                     {f.title}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
