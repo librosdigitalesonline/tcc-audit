@@ -45,7 +45,9 @@ export function Hero() {
             <CtaButton size="lg" className="text-balance">
               Quiero el Manual + Kit — $27 USD
             </CtaButton>
-            <p className="mt-2 text-xs text-muted-foreground">Precio en USD</p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Verás el monto en tu moneda al pagar
+            </p>
           </div>
         </FadeIn>
       </div>

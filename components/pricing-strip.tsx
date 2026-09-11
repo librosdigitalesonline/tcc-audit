@@ -39,10 +39,8 @@ export function PricingStrip() {
               Quiero el Manual + Kit — $27 USD
             </CtaButton>
             <p className="mt-2 text-xs text-muted-foreground">
-              Se cobra en USD. Verás el monto en tu moneda al pagar.
-            </p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Tarjeta, Apple Pay, Google Pay y métodos locales según tu país.
+              Pago único, sin suscripción. Tarjeta, Apple Pay, Google Pay y
+              métodos locales según tu país.
             </p>
           </div>
         </div>
