@@ -82,7 +82,9 @@ export function Comparison() {
             <p className="text-base text-muted-foreground mb-5">
               El segundo camino cuesta $27 y empieza hoy.
             </p>
-            <CtaButton size="lg">Quiero el Manual + Kit — $27</CtaButton>
+            <CtaButton size="lg" className="text-balance">
+              Quiero el Manual + Kit — $27 USD
+            </CtaButton>
           </div>
         </FadeIn>
       </div>

@@ -133,9 +133,9 @@ export function Bonus() {
             </p>
             <CtaButton
               size="lg"
-              className="w-full sm:w-auto"
+              className="w-full text-balance sm:w-auto"
             >
-              Quiero el Manual + Kit — $27
+              Quiero el Manual + Kit — $27 USD
             </CtaButton>
           </div>
         </FadeIn>

@@ -42,7 +42,12 @@ export function Hero() {
 
         <FadeIn delay={320}>
           <div className="mt-9">
-            <CtaButton size="lg">Quiero el Manual + Kit — $27</CtaButton>
+            <CtaButton size="lg" className="text-balance">
+              Quiero el Manual + Kit — $27 USD
+            </CtaButton>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Verás el monto en tu moneda al pagar
+            </p>
           </div>
         </FadeIn>
       </div>
