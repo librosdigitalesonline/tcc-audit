@@ -15,10 +15,10 @@ const WHATSAPP_SOPORTE =
   'https://wa.me/523351050828?text=Hola%2C%20ya%20compre%20el%20Manual%20TCC%20%2B%20Kit%20de%20Expedientes%20y%20tengo%20una%20duda'
 
 const MANUAL_URL =
-  'https://librosdigitalesonline.com/wp-content/uploads/2026/06/Manual-TCC.pdf'
+  'https://drive.google.com/file/d/1mTXA9S7dzGNyqC7PVOUr-_S3iruZ5GOQ/view?usp=drive_link'
 
 const KIT_URL =
-  'https://librosdigitalesonline.com/wp-content/uploads/2026/06/Kit-Psicologia.pdf'
+  'https://drive.google.com/drive/folders/1MfDmuF65Ju9osmyUPjB8jOhDOU4p7nUf?usp=drive_link'
 
 const STORAGE_KEY = 'tcc_purchase_tracked'
 
