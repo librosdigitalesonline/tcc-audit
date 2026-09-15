@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Manual TCC — Experiencia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{
+  background:#000;
+  font-family:'Inter',-apple-system,sans-serif;
+  display:flex;justify-content:center;align-items:center;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;-webkit-user-select:none;
+}
+
+.phone{
+  width:393px;height:852px;max-height:100vh;max-width:100vw;
+  background:#050810;position:relative;overflow:hidden;
+  border-radius:44px;
+  box-shadow:0 0 0 2px #111520;
+}
+@media(max-width:420px){.phone{border-radius:0;width:100vw;height:100dvh;height:100vh}}
+
+.s{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .6s ease;overflow:hidden}
+.s.on{opacity:1;pointer-events:all}
+
+/* ============================
+   SPLASH — COPY FILM'S STYLE
+   ============================ */
+.splash{position:relative;justify-content:space-between}
+
+.splash-bg{
+  position:absolute;inset:0;
+  background-image:url('background-splash.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.splash-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(3,5,10,.7) 0%,
+    rgba(3,5,10,.35) 30%,
+    rgba(3,5,10,.3) 50%,
+    rgba(3,5,10,.6) 70%,
+    rgba(3,5,10,.92) 100%
+  );
+}
+
+/* Brand top-left */
+.splash-brand{
+  position:relative;z-index:2;
+  padding:28px 24px 0;
+  display:flex;align-items:center;gap:8px;
+}
+.brand-bar{
+  width:3px;height:16px;
+  background:#0d9488;
+  border-radius:1px;
+}
+.brand-text{
+  font-size:10px;
+  font-weight:400;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+}
+
+/* Headline */
+.splash-middle{
+  position:relative;z-index:2;
+  padding:0 24px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.headline{
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:1.12;
+  letter-spacing:-.5px;
+}
+
+.h-line{
+  display:block;
+  color:#fff;
+}
+
+.h-line-1{font-size:26px}
+.h-line-2{
+  font-size:31px;
+  color:#2dd4bf;
+  padding:4px 0;
+}
+.h-line-3{font-size:31px}
+
+/* Volume hint */
+.vol-hint{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:24px;
+}
+.vol-icon{
+  width:18px;height:18px;
+  fill:rgba(255,255,255,.35);
+  animation:vol-blink 1.8s ease-in-out infinite;
+}
+@keyframes vol-blink{
+  0%,100%{opacity:.2}
+  50%{opacity:.8}
+}
+.vol-text{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  font-weight:400;
+}
+
+/* Buttons */
+.splash-bottom{
+  position:relative;z-index:2;
+  padding:0 24px 40px;
+  display:flex;flex-direction:column;gap:10px;
+}
+
+.btn-enter{
+  width:100%;
+  padding:20px 24px;
+  border:none;
+  border-radius:4px;
+  background:#0d9488;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .2s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+.btn-enter:hover{background:#0f9d91;box-shadow:0 0 40px rgba(13,148,136,.25)}
+.btn-enter:active{transform:scale(.97)}
+.btn-enter svg{width:12px;height:14px;fill:#fff}
+
+.btn-skip{
+  width:100%;
+  padding:18px 24px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:4px;
+  background:rgba(255,255,255,.02);
+  color:rgba(255,255,255,.35);
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .2s ease;
+  text-decoration:none;
+  text-align:center;
+  display:block;
+}
+.btn-skip:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.5);background:rgba(255,255,255,.03)}
+
+/* ============================
+   INCOMING CALL
+   ============================ */
+.s-call{
+  background:linear-gradient(150deg,#070d1a,#0f1a30,#0e1a2f);
+  justify-content:center;align-items:center;text-align:center;color:#fff;
+}
+.call-label{font-size:13px;color:rgba(255,255,255,.3);margin-bottom:10px;letter-spacing:.5px}
+.avatar{
+  width:88px;height:88px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:34px;position:relative;margin-bottom:18px;
+  background:linear-gradient(135deg,#1a2a45,#1e3a5f);
+}
+.avatar-ring{
+  position:absolute;inset:-5px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.1);
+  animation:aring 2s ease-in-out infinite;
+}
+@keyframes aring{0%,100%{transform:scale(1);opacity:.4}50%{transform:scale(1.18);opacity:0}}
+.caller-name{font-size:26px;font-weight:600;letter-spacing:-.3px;margin-bottom:3px}
+.caller-sub{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:4px}
+.call-status{font-size:13px;color:rgba(255,255,255,.25);margin-bottom:70px}
+
+.call-row{display:flex;gap:56px}
+.call-col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.cbtn{
+  width:66px;height:66px;border-radius:50%;border:none;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:transform .12s;
+}
+.cbtn:active{transform:scale(.9)}
+.cbtn svg{width:26px;height:26px;fill:#fff}
+.cbtn-red{background:#ef4444}
+.cbtn-green{background:#22c55e;animation:pgreen 1.8s ease-in-out infinite}
+@keyframes pgreen{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.4)}50%{box-shadow:0 0 0 18px rgba(34,197,94,0)}}
+.call-col span{font-size:11px;color:rgba(255,255,255,.3)}
+
+/* ============================
+   ON CALL
+   ============================ */
+.s-oncall{
+  background:linear-gradient(150deg,#070d1a,#0f1a30,#0e1a2f);
+  align-items:center;padding-top:80px;color:#fff;
+}
+.oc-timer{font-size:17px;color:rgba(255,255,255,.4);font-variant-numeric:tabular-nums;margin-bottom:16px;font-weight:300}
+.oc-wave{display:flex;gap:3px;align-items:center;height:36px;margin-bottom:28px}
+.oc-wave i{display:block;width:3px;border-radius:2px;background:rgba(13,148,136,.7);animation:wbar 1s ease-in-out infinite}
+@keyframes wbar{0%,100%{height:6px}50%{height:28px}}
+.oc-transcript{
+  background:rgba(255,255,255,.05);border-radius:16px;
+  padding:20px 22px;margin:0 24px;
+  font-size:15px;line-height:1.65;color:rgba(255,255,255,.8);
+  max-height:300px;overflow-y:auto;
+}
+.oc-cursor{display:inline-block;width:2px;height:15px;background:rgba(13,148,136,.8);vertical-align:middle;margin-left:2px;animation:cblink .7s step-end infinite}
+@keyframes cblink{0%,100%{opacity:1}50%{opacity:0}}
+.oc-end{
+  margin-top:40px;width:60px;height:60px;border-radius:50%;
+  background:#ef4444;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .6s;
+}
+.oc-end svg{width:22px;height:22px;fill:#fff}
+
+/* placeholder for remaining screens */
+.s-ph{background:#070a12;justify-content:center;align-items:center;color:rgba(255,255,255,.3);text-align:center;padding:40px;font-size:13px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<div class="phone" id="app">
+
+<!-- ===== SPLASH ===== -->
+<div class="s splash on" id="s-gate">
+  <div class="splash-bg"></div>
+  <div class="splash-overlay"></div>
+
+  <div class="splash-brand">
+    <div class="brand-bar"></div>
+    <div class="brand-text">Libros Digitales Online</div>
+  </div>
+
+  <div class="splash-middle">
+    <div class="headline">
+      <span class="h-line h-line-1">¿Estás preparada para</span>
+      <span class="h-line h-line-2">un paciente te</span>
+      <span class="h-line h-line-3">ponga a prueba?</span>
+    </div>
+
+    <div class="vol-hint">
+      <svg class="vol-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span class="vol-text">Sube el volumen</span>
+    </div>
+  </div>
+
+  <div class="splash-bottom">
+    <button class="btn-enter" onclick="go('s-call')">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      Entrar en la experiencia
+    </button>
+    <a class="btn-skip" href="https://whop.com/checkout/plan_PJPa2a58K2rfE" target="_blank" rel="noopener">
+      Ya pasé por la experiencia
+    </a>
+  </div>
+</div>
+
+<!-- ===== INCOMING CALL ===== -->
+<div class="s s-call" id="s-call">
+  <div class="call-label">llamada entrante</div>
+  <div class="avatar"><div class="avatar-ring"></div>👩🏻</div>
+  <div class="caller-name">Laura M.</div>
+  <div class="caller-sub">Paciente Nueva</div>
+  <div class="call-status">llamada entrante...</div>
+  <div class="call-row">
+    <div class="call-col">
+      <button class="cbtn cbtn-red" onclick="go('s-lock')"><svg viewBox="0 0 24 24"><path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85-.18.18-.43.28-.7.28-.28 0-.53-.11-.71-.29L.29 13.08A1.003 1.003 0 010 12.38c0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71 0 .28-.11.53-.29.71l-2.48 2.48c-.18.18-.43.29-.71.29-.27 0-.52-.1-.7-.28a11.27 11.27 0 00-2.66-1.85c-.33-.16-.56-.5-.56-.9v-3.1A14.97 14.97 0 0012 9z"/></svg></button>
+      <span>Rechazar</span>
+    </div>
+    <div class="call-col">
+      <button class="cbtn cbtn-green" onclick="go('s-oncall')"><svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg></button>
+      <span>Contestar</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ON CALL ===== -->
+<div class="s s-oncall" id="s-oncall">
+  <div class="avatar" style="width:72px;height:72px;font-size:28px;margin-bottom:10px">👩🏻</div>
+  <div style="font-size:20px;font-weight:600;color:#fff;margin-bottom:2px">Laura M.</div>
+  <div style="font-size:13px;color:rgba(255,255,255,.4);margin-bottom:18px">Paciente Nueva</div>
+  <div class="oc-timer" id="oc-timer">00:00</div>
+  <div class="oc-wave" id="oc-wave"></div>
+  <div class="oc-transcript"><span id="oc-txt"></span><span class="oc-cursor"></span></div>
+  <button class="oc-end" id="oc-end" onclick="go('s-lock')"><svg viewBox="0 0 24 24"><path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85-.18.18-.43.28-.7.28-.28 0-.53-.11-.71-.29L.29 13.08A1.003 1.003 0 010 12.38c0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71 0 .28-.11.53-.29.71l-2.48 2.48c-.18.18-.43.29-.71.29-.27 0-.52-.1-.7-.28a11.27 11.27 0 00-2.66-1.85c-.33-.16-.56-.5-.56-.9v-3.1A14.97 14.97 0 0012 9z"/></svg></button>
+</div>
+
+<!-- ===== LOCK SCREEN (placeholder) ===== -->
+<div class="s s-ph" id="s-lock">
+  Las demás pantallas están en el archivo completo.<br>Este archivo se enfoca en splash + llamada.
+</div>
+
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.s').forEach(s=>s.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  if(id==='s-oncall')initOnCall();
+}
+function initOnCall(){
+  const w=document.getElementById('oc-wave');
+  if(!w.children.length){for(let i=0;i<14;i++){const b=document.createElement('i');b.style.animationDelay=(i*.07)+'s';w.appendChild(b)}}
+  const lines=["Hola... disculpa que te llame así de repente...","Es que anoche tuve una crisis muy fuerte y no sé si lo que me pasa es normal...","Siento que no puedo respirar, que todo se va a derrumbar, que algo terrible va a pasar...","Mi terapeuta anterior me dijo que era ansiedad pero nunca me explicó qué hacer cuando pasa...","Solo me decía \"respira\" y me daba otra cita en 15 días...","¿Tú... tú sabrías qué hacer conmigo?"];
+  let sec=0;const tEl=document.getElementById('oc-timer');
+  const ti=setInterval(()=>{sec++;tEl.textContent=String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0')},1000);
+  const out=document.getElementById('oc-txt');let li=0,ci=0,buf='';
+  function tick(){
+    if(li>=lines.length){setTimeout(()=>{document.getElementById('oc-end').style.opacity='1';clearInterval(ti)},900);return}
+    if(ci===0&&li>0)buf+='\n\n';const t=lines[li];
+    if(ci<t.length){buf+=t[ci];out.innerHTML=buf.replace(/\n/g,'<br>');ci++;setTimeout(tick,28+Math.random()*35)}
+    else{li++;ci=0;setTimeout(tick,700)}
+  }
+  setTimeout(tick,1000);
+}
+</script>
+</body>
+</html>
